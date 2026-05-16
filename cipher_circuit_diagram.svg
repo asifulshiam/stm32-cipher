@@ -1,0 +1,144 @@
+<svg width="720" viewBox="0 0 720 900" xmlns="http://www.w3.org/2000/svg">
+  <title>CIPHER Circuit Diagram v10.0</title>
+  <rect width="720" height="900" fill="#FAFAFA"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 2L9 5L1 8" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="20" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#1A1A1A">CIPHER — Hardware Wiring Diagram</text>
+
+  <!-- ═══ HC-SR04 (top center, directly above Blue Pill) ═══ -->
+  <rect x="240" y="35" width="240" height="82" rx="8" fill="#E8F5E9" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="360" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#1B5E20">HC-SR04</text>
+  <text x="360" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#388E3C">Ultrasonic Distance Sensor</text>
+  <text x="360" y="89" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#388E3C">TRIG: PB1  ·  ECHO: PA8 (GPIO)</text>
+  <text x="360" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#388E3C">VCC: 5V  ·  GND</text>
+
+  <!-- ═══ OLED SSD1306 (top right) ═══ -->
+  <rect x="510" y="140" width="195" height="82" rx="8" fill="#EBF5FB" stroke="#2471A3" stroke-width="1.5"/>
+  <text x="607" y="162" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#154360">OLED SSD1306</text>
+  <text x="607" y="178" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#2471A3">0.96in I2C Display</text>
+  <text x="607" y="194" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#2471A3">SCL: PB6  ·  SDA: PB7</text>
+  <text x="607" y="210" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#2471A3">VCC: 3.3V  ·  GND</text>
+
+  <!-- ═══ Power rails (above Blue Pill) ═══ -->
+  <line x1="230" y1="252" x2="470" y2="252" stroke="#E74C3C" stroke-width="3" stroke-linecap="round"/>
+  <text x="234" y="248" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#922B21">3.3V</text>
+  <line x1="230" y1="258" x2="470" y2="258" stroke="#7F8C8D" stroke-width="2" stroke-linecap="round"/>
+  <text x="415" y="254" font-family="Arial,sans-serif" font-size="10" fill="#555">GND</text>
+
+  <!-- ═══ Blue Pill (center) ═══ -->
+  <rect x="230" y="260" width="240" height="360" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="2"/>
+  <text x="350" y="284" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#3C3489">STM32F103C8T6</text>
+  <text x="350" y="301" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">Blue Pill  ·  72 MHz  ·  SWD Debug</text>
+  <!-- Left pin labels -->
+  <text x="296" y="342" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA0 ADC</text>
+  <text x="296" y="368" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA1 BTN</text>
+  <text x="296" y="394" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA3 RST</text>
+  <text x="296" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA4 CS</text>
+  <text x="296" y="446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA5 SCK</text>
+  <text x="296" y="472" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA6 MISO</text>
+  <text x="296" y="498" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA7 MOSI</text>
+  <text x="296" y="524" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PA8 ECHO</text>
+  <!-- Right pin labels -->
+  <text x="414" y="342" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB0 DHT</text>
+  <text x="414" y="368" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB1 TRIG</text>
+  <text x="414" y="394" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB6 SCL</text>
+  <text x="414" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB7 SDA</text>
+  <text x="414" y="446" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB9 PWM</text>
+  <text x="414" y="472" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#534AB7">PB15 IR</text>
+
+  <!-- ═══ RFID RC522 (left middle) ═══ -->
+  <rect x="15" y="380" width="155" height="152" rx="8" fill="#FEF9E7" stroke="#D4AC0D" stroke-width="1.5"/>
+  <text x="92" y="402" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#7D6608">RFID RC522</text>
+  <text x="92" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">SPI Reader  ·  3.3V</text>
+  <text x="92" y="437" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">RST: PA3</text>
+  <text x="92" y="453" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">CS:  PA4</text>
+  <text x="92" y="469" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">SCK: PA5</text>
+  <text x="92" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">MISO: PA6</text>
+  <text x="92" y="501" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D4AC0D">MOSI: PA7</text>
+  <text x="92" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="#9C6A00">+ 100nF cap on VCC</text>
+
+  <!-- ═══ IR Sensor (right upper) ═══ -->
+  <rect x="510" y="278" width="195" height="80" rx="8" fill="#FDEDEC" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="607" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#922B21">IR Sensor</text>
+  <text x="607" y="316" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C0392B">Obstacle Detection Module</text>
+  <text x="607" y="332" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C0392B">OUT: PB15</text>
+  <text x="607" y="348" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C0392B">VCC: 5V  ·  GND</text>
+
+  <!-- ═══ DHT11 (right middle) ═══ -->
+  <rect x="510" y="402" width="195" height="78" rx="8" fill="#EBF5FB" stroke="#1A5276" stroke-width="1.5"/>
+  <text x="607" y="424" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#154360">DHT11</text>
+  <text x="607" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#1A5276">Temp and Humidity Sensor</text>
+  <text x="607" y="456" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#1A5276">DATA: PB0  (1-wire)</text>
+  <text x="607" y="472" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#1A5276">VCC: 3.3V  ·  GND</text>
+
+  <!-- ═══ Buzzer (right lower) ═══ -->
+  <rect x="510" y="530" width="195" height="78" rx="8" fill="#FEF5E7" stroke="#D35400" stroke-width="1.5"/>
+  <text x="607" y="552" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#784212">Buzzer</text>
+  <text x="607" y="568" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D35400">PWM Tone Output</text>
+  <text x="607" y="584" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D35400">Signal: PB9 (TIM4 CH4)</text>
+  <text x="607" y="600" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#D35400">VCC: 3.3V  ·  GND</text>
+
+  <!-- ═══ Potentiometer (left bottom) ═══ -->
+  <rect x="15" y="624" width="155" height="78" rx="8" fill="#F4ECF7" stroke="#7D3C98" stroke-width="1.5"/>
+  <text x="92" y="646" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#5B2C6F">Potentiometer</text>
+  <text x="92" y="662" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#7D3C98">10K Dial Input</text>
+  <text x="92" y="678" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#7D3C98">Wiper: PA0 (ADC1_IN0)</text>
+  <text x="92" y="694" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#7D3C98">VCC: 3.3V  ·  GND</text>
+
+  <!-- ═══ Push Button (bottom center) ═══ -->
+  <rect x="230" y="710" width="240" height="68" rx="8" fill="#EAEDED" stroke="#566573" stroke-width="1.5"/>
+  <text x="350" y="733" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#2C3E50">Push Button</text>
+  <text x="350" y="749" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#566573">Confirm and Hold Input</text>
+  <text x="350" y="765" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#566573">Signal: PA1 (Pull-up)  ·  GND</text>
+
+  <!-- ═══════ WIRES ═══════ -->
+
+  <!-- PA8 ECHO → HC-SR04: left routing column x=200 -->
+  <path d="M230,524 L200,524 L200,75 L240,75" fill="none" stroke="#388E3C" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="196" y="350" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#388E3C" transform="rotate(-90,196,350)">ECHO</text>
+
+  <!-- PB1 TRIG → HC-SR04: outer right column x=712, above everything -->
+  <path d="M470,368 L712,368 L712,28 L460,28 L460,35" fill="none" stroke="#388E3C" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="591" y="362" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#388E3C">TRIG</text>
+
+  <!-- PB6 SCL → OLED (routing column x=484) -->
+  <path d="M470,394 L484,394 L484,170 L510,170" fill="none" stroke="#2471A3" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PB7 SDA → OLED (routing column x=490) -->
+  <path d="M470,420 L490,420 L490,196 L510,196" fill="none" stroke="#2471A3" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="487" y="300" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#2471A3" transform="rotate(-90,487,300)">I2C</text>
+
+  <!-- SPI bus: PA3-PA7 → RFID (horizontal) -->
+  <path d="M230,394 L170,394" fill="none" stroke="#D4AC0D" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M230,420 L170,420" fill="none" stroke="#D4AC0D" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M230,446 L170,446" fill="none" stroke="#D4AC0D" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M230,472 L170,472" fill="none" stroke="#D4AC0D" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M230,498 L170,498" fill="none" stroke="#D4AC0D" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="200" y="430" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#9C6A00" transform="rotate(-90,200,430)">SPI Bus</text>
+
+  <!-- PB15 IR → IR Sensor (routing column x=502) -->
+  <path d="M470,472 L502,472 L502,318 L510,318" fill="none" stroke="#C0392B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PB0 DHT → DHT11 (routing column x=496) -->
+  <path d="M470,338 L496,338 L496,441 L510,441" fill="none" stroke="#1A5276" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PB9 PWM → Buzzer (routing column x=508) -->
+  <path d="M470,446 L508,446 L508,569 L510,569" fill="none" stroke="#D35400" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PA0 ADC → Potentiometer (routing column x=185) -->
+  <path d="M230,338 L185,338 L185,663 L170,663" fill="none" stroke="#7D3C98" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- PA1 BTN → Push Button (routing column x=213) -->
+  <path d="M230,364 L213,364 L213,744 L230,744" fill="none" stroke="#566573" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ═══ Power Notes ═══ -->
+  <rect x="90" y="820" width="540" height="65" rx="8" fill="#F2F3F4" stroke="#BDC3C7" stroke-width="1"/>
+  <text x="360" y="840" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#444">Power Notes</text>
+  <text x="360" y="857" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#555">Most components: 3.3V from Blue Pill 3V3 pin  ·  Common GND for all</text>
+  <text x="360" y="874" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#C0392B">IR Sensor and HC-SR04: require 5V  ·  RFID RC522: 3.3V ONLY (5V will damage)</text>
+</svg>

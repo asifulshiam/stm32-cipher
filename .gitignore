@@ -1,0 +1,52 @@
+# ─── STM32 build artifacts ────────────────────────────────────────────
+build/
+Debug/
+Release/
+*.o
+*.obj
+*.elf
+*.map
+*.list
+*.lst
+*.su
+*.d
+*.cyclo
+*.bin.tmp
+
+# ─── CubeIDE / Eclipse metadata (if ever touched) ────────────────────
+.metadata/
+.settings/
+.cproject
+.project
+.launches/
+
+# ─── CMake intermediates ──────────────────────────────────────────────
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# ─── IDE state ────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+
+# ─── OS junk ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Docs we never publish in repo ───────────────────────────────────
+*.pdf
+
+# ─── Personal / scratch ───────────────────────────────────────────────
+*.bak
+*.swp
+*~
+TODO.local.md
+NOTES.local.md
+
+# ─── Nested IDE state (STM32 extension stores per-project) ────────────
+**/.settings/
+**/.vscode/
